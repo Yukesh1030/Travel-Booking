@@ -35,7 +35,7 @@
       </nav>
 
       <div class="nav-actions">
-        <a href="#booking-panel" class="btn btn-gold nav-cta">Plan Escape</a>
+        <a href="#booking-panel" class="btn btn-gold nav-cta">Log In</a>
         <button
           type="button"
           class="hamburger"
@@ -73,7 +73,7 @@
     </div>
 
     <div class="mobile-drawer-footer">
-      <a href="#booking-panel" class="btn btn-gold">Find Your Perfect Escape</a>
+      <a href="#booking-panel" class="btn btn-gold">LogIn</a>
       <p class="mobile-drawer-tagline">Discover More. Travel Better. Live Unforgettable.</p>
     </div>
   </aside>
@@ -111,8 +111,8 @@
         </p>
 
         <div class="hero-ctas">
-          <a href="#destinations" class="btn btn-gold">Explore Destinations</a>
-          <a href="#packages" class="btn btn-outline-ivory">Discover Packages</a>
+          <a href="404.html" class="btn btn-gold">Explore Destinations</a>
+          <a href="404.html" class="btn btn-outline-ivory">Discover Packages</a>
         </div>
 
         <div class="hero-bottom-bar">
@@ -122,7 +122,7 @@
             <div class="hero-trust-item"><strong>100%</strong> Transparent Pricing</div>
           </div>
 
-          <a href="#destinations" class="scroll-indicator" aria-label="Scroll down to destinations">
+          <a href="404.html" class="scroll-indicator" aria-label="Scroll down to destinations">
             <span>Scroll to Explore</span>
             <span class="scroll-mouse" aria-hidden="true"><span class="scroll-wheel"></span></span>
           </a>
@@ -139,11 +139,11 @@
             <span class="booking-panel-note">Instant curated matches · Flexible booking holds</span>
           </div>
 
-          <form class="booking-form" id="bookingSearchForm">
+          <form class="booking-form" id="bookingSearchForm" novalidate>
             <div class="booking-field">
               <label for="searchDestination" class="booking-label">Destination</label>
-              <select id="searchDestination" class="booking-select" aria-label="Destination">
-                <option value="all">Where to? (All Iconic Places)</option>
+              <select id="searchDestination" class="booking-select" aria-label="Destination" required>
+                <option value="">Where to? (Select destination)</option>
                 <option value="bali">Bali, Indonesia</option>
                 <option value="maldives">Maldives</option>
                 <option value="switzerland">Switzerland</option>
@@ -172,8 +172,8 @@
 
             <div class="booking-field">
               <label for="searchTravelType" class="booking-label">Travel type</label>
-              <select id="searchTravelType" class="booking-select" aria-label="Travel type">
-                <option value="all">Any experience</option>
+              <select id="searchTravelType" class="booking-select" aria-label="Travel type" required>
+                <option value="any">Any experience</option>
                 <option value="honeymoon">Honeymoon</option>
                 <option value="family">Family Retreat</option>
                 <option value="luxury">Luxury Villa</option>
@@ -184,14 +184,7 @@
 
             <button type="submit" class="btn btn-gold booking-submit">Search Your Journey</button>
           </form>
-
-          <div class="search-results-box" id="searchResults" aria-live="polite">
-            <div class="search-results-top">
-              <strong id="searchResultsSummary">Curated Escapes</strong>
-              <button type="button" class="btn btn-outline-ocean btn-sm" id="clearSearchBtn">Close Results</button>
-            </div>
-            <div class="search-results-grid" id="searchResultsGrid"></div>
-          </div>
+          <p class="form-validation-msg" id="bookingFormFeedback" aria-live="polite"></p>
         </div>
       </div>
     </section>
@@ -247,7 +240,7 @@
               </div>
               <div class="dest-card-footer">
                 <span class="dest-rate">From <strong>$1,890</strong></span>
-                <button type="button" class="btn btn-gold btn-sm" data-destination="bali">Explore</button>
+                <a href="404.html" class="btn btn-gold btn-sm">Explore</a>
               </div>
             </div>
           </article>
@@ -264,7 +257,7 @@
               </div>
               <div class="dest-card-footer">
                 <span class="dest-rate">From <strong>$3,450</strong></span>
-                <button type="button" class="btn btn-gold btn-sm" data-destination="maldives">Explore</button>
+                <a href="404.html" class="btn btn-gold btn-sm">Explore</a>
               </div>
             </div>
           </article>
@@ -281,7 +274,7 @@
               </div>
               <div class="dest-card-footer">
                 <span class="dest-rate">From <strong>$2,980</strong></span>
-                <button type="button" class="btn btn-gold btn-sm" data-destination="switzerland">Explore</button>
+                <a href="404.html" class="btn btn-gold btn-sm">Explore</a>
               </div>
             </div>
           </article>
@@ -298,7 +291,7 @@
               </div>
               <div class="dest-card-footer">
                 <span class="dest-rate">From <strong>$2,540</strong></span>
-                <button type="button" class="btn btn-gold btn-sm" data-destination="paris">Explore</button>
+                <a href="404.html" class="btn btn-gold btn-sm">Explore</a>
               </div>
             </div>
           </article>
@@ -315,7 +308,7 @@
               </div>
               <div class="dest-card-footer">
                 <span class="dest-rate">From <strong>$2,290</strong></span>
-                <button type="button" class="btn btn-gold btn-sm" data-destination="dubai">Explore</button>
+                <a href="404.html" class="btn btn-gold btn-sm">Explore</a>
               </div>
             </div>
           </article>
@@ -332,7 +325,7 @@
               </div>
               <div class="dest-card-footer">
                 <span class="dest-rate">From <strong>$1,640</strong></span>
-                <button type="button" class="btn btn-gold btn-sm" data-destination="thailand">Explore</button>
+                <a href="404.html" class="btn btn-gold btn-sm">Explore</a>
               </div>
             </div>
           </article>
@@ -377,15 +370,7 @@
               </div>
               <div class="hotel-footer">
                 <div class="hotel-price">Starting from <strong>$790 / night</strong></div>
-                <button
-                  type="button"
-                  class="btn btn-ocean btn-sm"
-                  data-modal-kicker="Handpicked Beach Resort · Maldives"
-                  data-modal-title="Azure Horizon Ocean Pavilion"
-                  data-modal-desc="Steps from pristine coral gardens with uninterrupted sea-level infinity pools and bespoke dining."
-                  data-modal-highlights="Complimentary daily breakfast & sunset aperitif|Private speedboat or seaplane arrival lounge|Dedicated marine excursion host"
-                  data-modal-price="From $790 / night (double occupancy)"
-                >View Details</button>
+                <a href="404.html" class="btn btn-ocean btn-sm">View Details</a>
               </div>
             </div>
           </article>
@@ -406,15 +391,7 @@
               </div>
               <div class="hotel-footer">
                 <div class="hotel-price">Starting from <strong>$640 / night</strong></div>
-                <button
-                  type="button"
-                  class="btn btn-ocean btn-sm"
-                  data-modal-kicker="Luxury Jungle Villa · Bali"
-                  data-modal-title="Surya Canopy River Sanctuary"
-                  data-modal-desc="Handcrafted timber and stone villa immersed in old-growth Balinese rainforest."
-                  data-modal-highlights="In-villa floating morning breakfast|60-minute welcome herbal spa ritual|Private driver for Ubud cultural excursions"
-                  data-modal-price="From $640 / night"
-                >View Details</button>
+                <a href="404.html" class="btn btn-ocean btn-sm">View Details</a>
               </div>
             </div>
           </article>
@@ -435,15 +412,7 @@
               </div>
               <div class="hotel-footer">
                 <div class="hotel-price">Starting from <strong>$860 / night</strong></div>
-                <button
-                  type="button"
-                  class="btn btn-ocean btn-sm"
-                  data-modal-kicker="Boutique Alpine Sanctuary · Switzerland"
-                  data-modal-title="Valais Crest Alpine Chalet"
-                  data-modal-desc="Ski-in trail access, wood-fired wellness suites, and sommelier-led Swiss cellar tastings."
-                  data-modal-highlights="Heated outdoor mountain-view thermal pool|Private electric station transfer on arrival|Daily alpine afternoon tea by the hearth"
-                  data-modal-price="From $860 / night"
-                >View Details</button>
+                <a href="404.html" class="btn btn-ocean btn-sm">View Details</a>
               </div>
             </div>
           </article>
@@ -464,15 +433,7 @@
               </div>
               <div class="hotel-footer">
                 <div class="hotel-price">Starting from <strong>$720 / night</strong></div>
-                <button
-                  type="button"
-                  class="btn btn-ocean btn-sm"
-                  data-modal-kicker="Luxury Desert Camp · UAE"
-                  data-modal-title="Qasr Al Mirage Dune Suites"
-                  data-modal-desc="Private firepit decks, astronomy sessions, and sunrise wildlife drives across tranquil sand seas."
-                  data-modal-highlights="Two daily guided desert experiences included|Private plunge pool overlooking the dunes|Starlight gourmet fireside tasting dinner"
-                  data-modal-price="From $720 / night"
-                >View Details</button>
+                <a href="404.html" class="btn btn-ocean btn-sm">View Details</a>
               </div>
             </div>
           </article>
@@ -523,15 +484,7 @@
               </div>
               <div class="package-footer">
                 <div class="package-price"><span>Starting from</span><strong>$5,400 / guest</strong></div>
-                <button
-                  type="button"
-                  class="btn btn-gold btn-sm"
-                  data-modal-kicker="Adventure & Luxury Package · 8 Nights"
-                  data-modal-title="Savannah Horizon Private Safari"
-                  data-modal-desc="Fly between private conservation reserves with dedicated wildlife trackers and candlelit bush dinners."
-                  data-modal-highlights="Light-aircraft inter-camp flights included|Luxury canvas suites with private plunge pools|Conservation fees & full board included"
-                  data-modal-price="$5,400 per guest"
-                >Book Package</button>
+                <a href="404.html" class="btn btn-gold btn-sm">Book Package</a>
               </div>
             </div>
           </article>
@@ -557,15 +510,7 @@
               </div>
               <div class="package-footer">
                 <div class="package-price"><span>Starting from</span><strong>$3,890 / guest</strong></div>
-                <button
-                  type="button"
-                  class="btn btn-gold btn-sm"
-                  data-modal-kicker="Honeymoon Collection · 6 Nights"
-                  data-modal-title="Moonlit Sandbank & Overwater Romance"
-                  data-modal-desc="Intimate overwater living paired with a private chef-hosted pavilion dinner on a secluded sandbar."
-                  data-modal-highlights="Return seaplane & VIP airport lounge|Sunset dolphin cruise on a traditional dhoni|Private 5-course beach canopy dinner"
-                  data-modal-price="$3,890 per guest"
-                >Book Package</button>
+                <a href="404.html" class="btn btn-gold btn-sm">Book Package</a>
               </div>
             </div>
           </article>
@@ -591,15 +536,7 @@
               </div>
               <div class="package-footer">
                 <div class="package-price"><span>Starting from</span><strong>$2,190 / guest</strong></div>
-                <button
-                  type="button"
-                  class="btn btn-gold btn-sm"
-                  data-modal-kicker="Family Collection · 9 Nights"
-                  data-modal-title="Thailand Heritage & Emerald Bays Family Escape"
-                  data-modal-desc="Balanced cultural discovery, ethical elephant sanctuary visits, and calm shallow lagoon bays."
-                  data-modal-highlights="Interconnecting family villa suites|Private chauffeured minivan & speedboat hops|Kids cultural craft & Thai cooking morning"
-                  data-modal-price="$2,190 per guest"
-                >Book Package</button>
+                <a href="404.html" class="btn btn-gold btn-sm">Book Package</a>
               </div>
             </div>
           </article>
@@ -625,15 +562,7 @@
               </div>
               <div class="package-footer">
                 <div class="package-price"><span>Starting from</span><strong>$3,620 / guest</strong></div>
-                <button
-                  type="button"
-                  class="btn btn-gold btn-sm"
-                  data-modal-kicker="Luxury Alpine Collection · 7 Nights"
-                  data-modal-title="Grand Alpine Peaks & First-Class Rail"
-                  data-modal-desc="Seamless luggage-free rail travel through Switzerland's dramatic valleys and sky-high ridge lines."
-                  data-modal-highlights="Glacier Express Excellence Class seats|Boutique thermal spa hotels in Zermatt & St. Moritz|Door-to-door luggage forwarding"
-                  data-modal-price="$3,620 per guest"
-                >Book Package</button>
+                <a href="404.html" class="btn btn-gold btn-sm">Book Package</a>
               </div>
             </div>
           </article>
@@ -688,10 +617,11 @@
               </div>
             </div>
 
-            <form class="flight-search-widget" id="flightSearchForm" aria-label="Search flights and transfers">
+            <form class="flight-search-widget" id="flightSearchForm" novalidate aria-label="Search flights and transfers">
               <div class="booking-field">
                 <label for="flightRoute" class="booking-label">Select Route</label>
-                <select id="flightRoute" class="booking-select">
+                <select id="flightRoute" class="booking-select" required>
+                  <option value="">Choose flight route...</option>
                   <option value="London (LHR) → Malé (MLE)">London → Maldives</option>
                   <option value="New York (JFK) → Paris (CDG)">New York → Paris</option>
                   <option value="Singapore (SIN) → Denpasar (DPS)">Singapore → Bali</option>
@@ -700,7 +630,8 @@
               </div>
               <div class="booking-field">
                 <label for="flightCabin" class="booking-label">Experience</label>
-                <select id="flightCabin" class="booking-select">
+                <select id="flightCabin" class="booking-select" required>
+                  <option value="">Choose cabin...</option>
                   <option value="Business Class">Business Class</option>
                   <option value="First Class Suite">First Class Suite</option>
                   <option value="Scenic Rail + Flight">Scenic Rail + Flight</option>
@@ -708,7 +639,7 @@
               </div>
               <button type="submit" class="btn btn-gold">Search Flights</button>
             </form>
-            <div class="flight-search-output" id="flightSearchOutput" aria-live="polite"></div>
+            <p class="form-validation-msg" id="flightFormFeedback" aria-live="polite"></p>
           </div>
         </div>
       </div>
@@ -746,15 +677,7 @@
                 Terms: Minimum 5-night stay · Book 45 days prior · Blackout festive dates (20 Dec – 05 Jan) apply · Subject to villa availability.
               </div>
               <div style="margin-top:1.15rem;">
-                <button
-                  type="button"
-                  class="btn btn-gold"
-                  data-modal-kicker="Honeymoon Offer · Valid Until 31 Dec 2026"
-                  data-modal-title="25% Off + Sunset Pavilion Dinner"
-                  data-modal-desc="Includes private beach dining setup, a 90-minute couples ritual, and complimentary room category upgrade upon arrival when available."
-                  data-modal-highlights="Validity: Travel through 31 Dec 2026|Minimum Stay: 5 consecutive nights|Terms: Advance booking 45 days prior; non-combinable with other flash rates"
-                  data-modal-price="25% savings on villa rate"
-                >Claim Honeymoon Offer</button>
+                <a href="404.html" class="btn btn-gold">Claim Honeymoon Offer</a>
               </div>
             </div>
           </article>
@@ -1076,7 +999,7 @@
                 </p>
               </div>
               <div>
-                <button type="button" class="btn btn-gold" data-guide="alpine">Read 7-Day Itinerary</button>
+                <a href="404.html" class="btn btn-gold">Read 7-Day Itinerary</a>
               </div>
             </div>
           </article>
@@ -1086,21 +1009,21 @@
               <span class="guide-category">Destination Guide · Seasonal</span>
               <h3>Maldives Atolls vs. Bali Highlands: Which Rhythm Suits You?</h3>
               <p>Compare calm lagoon reef weeks against misty emerald terraces and cultural temple mornings.</p>
-              <button type="button" class="guide-read-btn" data-guide="atolls">Read Guide →</button>
+              <a href="404.html" class="guide-read-btn">Read Guide →</a>
             </article>
 
             <article class="guide-mini-card" data-aos="fade-up" data-aos-delay="80">
               <span class="guide-category">Packing Guide · Resort &amp; Alpine</span>
               <h3>The Capsule Wardrobe for Seaplanes &amp; Mountain Terraces</h3>
               <p>Smart linen-and-merino layering built around 20 kg island charter luggage allowances.</p>
-              <button type="button" class="guide-read-btn" data-guide="packing">Read Packing List →</button>
+              <a href="404.html" class="guide-read-btn">Read Packing List →</a>
             </article>
 
             <article class="guide-mini-card" data-aos="fade-up" data-aos-delay="120">
               <span class="guide-category">Local Experiences · Travel Tips</span>
               <h3>Quiet Windows: Sunrise Longtails &amp; After-Hours Courtyards</h3>
               <p>The exact hours our local hosts recommend for serene landmarks across Thailand and Paris.</p>
-              <button type="button" class="guide-read-btn" data-guide="etiquette">Read Insider Tips →</button>
+              <a href="404.html" class="guide-read-btn">Read Insider Tips →</a>
             </article>
           </div>
         </div>
@@ -1128,7 +1051,7 @@
         </p>
 
         <div class="final-cta-actions">
-          <a href="#packages" class="btn btn-gold">Explore Packages</a>
+          <a href="404.html" class="btn btn-gold">Explore Packages</a>
           <a href="404.html" class="btn btn-outline-ivory">Contact Our Travel Experts</a>
         </div>
 
@@ -1202,19 +1125,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- ==================== Interactive Detail / Concierge Modal ==================== -->
-  <div class="modal-backdrop" id="detailModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
-    <div class="modal-dialog">
-      <button type="button" class="modal-close" id="modalCloseBtn" aria-label="Close modal">&times;</button>
-      <span class="modal-kicker" id="modalKicker"></span>
-      <h2 class="modal-title" id="modalTitle"></h2>
-      <p class="modal-body-text" id="modalDesc"></p>
-      <ul class="modal-highlights" id="modalHighlights"></ul>
-      <div class="modal-actions" id="modalActions"></div>
-      <p class="modal-body-text" id="modalFeedback" style="font-weight:600;color:var(--ocean);" aria-live="polite"></p>
-    </div>
-  </div>
 
   <!-- Libraries: GSAP, ScrollTrigger, AOS, Lenis -->
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>

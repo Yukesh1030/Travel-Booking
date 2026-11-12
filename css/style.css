@@ -815,6 +815,25 @@ footer {
   box-shadow: 0 0 0 3px var(--gold-20);
 }
 
+.booking-input.is-invalid,
+.booking-select.is-invalid,
+.newsletter-form.is-invalid {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px var(--gold-35);
+}
+
+.form-validation-msg {
+  margin-top: 0.85rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--ocean);
+  min-height: 1.25em;
+}
+
+.section-ocean .form-validation-msg {
+  color: var(--gold);
+}
+
 .date-range-group {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
